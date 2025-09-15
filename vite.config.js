@@ -10,4 +10,13 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    server: {
+        host: '0.0.0.0', // listen on all interfaces inside the container
+        port: 5173,
+        strictPort: true,
+        hmr: {
+            host: 'localhost', // or your host machine IP for Windows
+            protocol: 'ws',
+        },
+    },
 });
