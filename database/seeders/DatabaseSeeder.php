@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()->create([
             'name' => 'Test User',
+            'username' => 'testuser',
             'email' => 'test@example.com'
         ]);
         
@@ -33,6 +34,6 @@ class DatabaseSeeder extends Seeder
             Category::create(['name' => $category]);
         }
 
-        Post::factory(100)->create();
+        // Post::factory(100)->create();
     }
 }
